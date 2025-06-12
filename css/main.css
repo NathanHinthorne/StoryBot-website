@@ -130,3 +130,51 @@ footer a:hover {
   background-color: var(--warning-color) !important;
 }
 
+
+.wave-divider-darker-1 {
+  height: 100px;
+  background-image: url('images/wave-haikei-darker-1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wave-divider-darker-2 {
+  height: 100px;
+  background-image: url('images/wave-haikei-darker-2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wave-divider-darker-3 {
+  height: 100px;
+  background-image: url('images/wave-haikei-darker-3.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wave-divider-lighter-1 {
+  height: 100px;
+  background-image: url('images/wave-haikei-lighter-1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wave-divider-lighter-2 {
+  height: 100px;
+  background-image: url('images/wave-haikei-lighter-2.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wave-divider-lighter-3 {
+  height: 100px;
+  background-image: url('images/wave-haikei-3.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
