@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About StoryBot - Collaborative Storytelling for Discord</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" inline>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" inline>
 
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/navbar.css">
@@ -14,7 +14,14 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">StoryBot</a>
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-container">
+          <div class="brand-icon">
+            <img src="images/logo-large.png" alt="StoryBot Logo" class="brand-img">
+          </div>
+          <span>StoryBot</span>
+        </div>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -29,7 +36,7 @@
           <li class="nav-item">
             <a class="nav-link" href="premium.html">Premium</a>
           </li>
-        </ul>
+        </ul>                                                                                                
       </div>
     </div>
   </nav>
@@ -45,8 +52,8 @@
       <div class="row align-items-center mb-5">
         <div class="col-lg-6">
           <h2>What is StoryBot?</h2>
-          <p>StoryBot is a collaborative storytelling Discord bot powered by the Gemini API. It enables users to co-author stories and engage with each other in a structured, gamified format.</p>
-          <p>Our mission is to bring communities together through the power of shared storytelling, enhanced by AI assistance that helps spark creativity and keep narratives flowing.</p>
+          <p>StoryBot is a collaborative storytelling Discord bot powered by Gemini AI. It enables users to co-author stories and engage with each other in a structured, gamified format.</p>
+          <p>Our mission is to bring communities together through the power of shared storytelling. While we use AI, it takes a backseat, putting the focus on human creativity and interaction. The Gemini AI will simply create helpful summaries, spark ideas, and keep narratives flowing.</p>
         </div>
         <div class="col-lg-6">
           <div id="storyBotCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -199,7 +206,7 @@
     <div class="container text-center">
       <h2>Ready to Start Your Story?</h2>
       <p class="lead mb-4">Add StoryBot to your Discord server today</p>
-      <a href="https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=8&scope=bot%20applications.commands" class="btn btn-light btn-lg">
+      <a href="https://discord.com/oauth2/authorize?client_id=1063655892643500042&permissions=8&integration_type=0&scope=bot" target="_blank" class="btn btn-light btn-lg">
         <i class="fab fa-discord me-2"></i>Add to Discord
       </a>
     </div>
@@ -213,11 +220,6 @@
           <p>Collaborative storytelling for Discord communities</p>
         </div>
         <div class="col-md-6 text-md-end">
-          <ul class="list-inline">
-            <li class="list-inline-item"><a href="index.html">Home</a></li>
-            <li class="list-inline-item"><a href="about.html">About</a></li>
-            <li class="list-inline-item"><a href="premium.html">Premium</a></li>
-          </ul>
           <p class="mb-0">© 2025 StoryBot. All rights reserved.</p>
         </div>
       </div>
@@ -231,7 +233,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://js.stripe.com/v3/"></script>
   <script src="app.js"></script>
-  <script src="js/about.js"></script>
 </body>
 </html>
 

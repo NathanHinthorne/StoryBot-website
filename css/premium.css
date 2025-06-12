@@ -1,12 +1,4 @@
 /* Premium page specific styles */
-.premium-section {
-  background-color: var(--darker-bg);
-  color: white;
-}
-
-.premium-features {
-  background-color: var(--light-bg);
-}
 
 .feature-card {
   background-color: white;
@@ -27,30 +19,34 @@
   font-weight: 600;
 }
 
-/* Comparison table styles */
+/* Comparison table styles - Light Theme */
 .comparison-table {
-  background-color: var(--darker-bg);
+  background-color: var(--light-bg);
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 40px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid #e0e0e0;
 }
 
 .comparison-header {
-  background-color: var(--dark-bg);
-  color: white;
+  background-color: #f0f0f0;
+  color: var(--dark-bg);
   padding: 20px;
   text-align: center;
   font-weight: bold;
   font-size: 1.2rem;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .comparison-header.premium {
   color: var(--warning-color);
+  background-color: #f8f5e6;
 }
 
 .comparison-row {
   display: flex;
-  border-bottom: 1px solid #3a3d42;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .comparison-row:last-child {
@@ -58,16 +54,16 @@
 }
 
 .comparison-category {
-  background-color: var(--dark-bg);
-  color: white;
+  background-color: #f0f0f0;
+  color: var(--dark-bg);
   padding: 15px 20px;
   width: 100%;
   font-weight: bold;
 }
 
 .comparison-feature {
-  background-color: var(--darker-bg);
-  color: #a3a6aa;
+  background-color: var(--light-bg);
+  color: #555;
   padding: 15px 20px;
   width: 100%;
 }
@@ -78,8 +74,9 @@
   justify-content: center;
   padding: 15px;
   width: 100%;
-  color: white;
+  color: #333;
   text-align: center;
+  background-color: white;
 }
 
 .check-icon {
@@ -95,6 +92,17 @@
 .infinity-icon {
   color: var(--success-color);
   font-size: 1.2rem;
+}
+
+/* Add subtle hover effect to rows */
+.comparison-row:hover .comparison-feature,
+.comparison-row:hover .comparison-value {
+  background-color: #f9f9f9;
+}
+
+/* Add subtle border between columns */
+.comparison-value {
+  border-left: 1px solid #e0e0e0;
 }
 
 /* Testimonials */

@@ -45,22 +45,20 @@ footer a:hover {
   text-decoration: underline;
 }
 
-.list-inline-item:not(:last-child) {
-  margin-right: 15px;
-}
-
 /* Buttons */
 .btn-primary {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
 }
 
+.btn-primary:hover {
+  background-color: #4752c4;
+  border-color: #4752c4;
+}
+
 .btn-success {
   background-color: var(--success-color);
   border-color: var(--success-color);
-  padding: 0.8rem 2rem;
-  font-size: 1.2rem;
-  margin-top: 1rem;
 }
 
 .premium-btn {
@@ -106,3 +104,29 @@ footer a:hover {
     margin-bottom: 20px;
   }
 }
+
+/* Override Bootstrap background utilities */
+.bg-dark {
+  background-color: var(--dark-bg) !important;
+}
+
+.bg-darker {
+  background-color: var(--darker-bg) !important;
+}
+
+.bg-light {
+  background-color: var(--light-bg) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-success {
+  background-color: var(--success-color) !important;
+}
+
+.bg-warning {
+  background-color: var(--warning-color) !important;
+}
+
