@@ -1,6 +1,6 @@
 /* Home page specific styles */
 .hero-container {
-  background-image: url('../images/banner2.jpeg');
+  background-image: url('https://raw.githubusercontent.com/NathanHinthorne/StoryBot-website/refs/heads/main/images/banner.jpeg');
   background-size: cover;
   background-position: center;
   min-height: 100vh;

@@ -7,9 +7,240 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" inline>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" inline>
 
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/about.css">
+  <style>
+/* Main CSS file - extracted from styles.css */
+/* Global styles and variables */
+:root {
+  --primary-color: #5865F2;
+  --success-color: #43b581;
+  --warning-color: #e9b84e;
+  --danger-color: #f04747;
+  --dark-bg: #23272a;
+  --darker-bg: #2c2f33;
+  --light-bg: #f8f9fa;
+  --text-light: rgba(255, 255, 255, 0.8);
+  --text-muted: #6c757d;
+  --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --transition-default: all 0.3s ease;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Common layout elements */
+.page-header {
+  background-color: var(--dark-bg);
+  color: white;
+  padding: 120px 0 60px;
+  text-align: center;
+}
+
+footer {
+  background-color: var(--dark-bg);
+  color: white;
+  padding: 2rem 0;
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #7289da;
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #4752c4;
+  border-color: #4752c4;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  border-color: var(--success-color);
+}
+
+.premium-btn {
+  background-color: var(--warning-color);
+  border-color: var(--warning-color);
+  color: var(--dark-bg);
+  font-weight: bold;
+}
+
+.premium-btn:hover {
+  background-color: #d9a83e;
+  border-color: #d9a83e;
+  color: var(--dark-bg);
+}
+
+/* Feature cards (used across multiple pages) */
+.feature-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.feature-card h3 {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 100px 0 40px;
+  }
+  
+  .feature-card, .testimonial-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Override Bootstrap background utilities */
+.bg-dark {
+  background-color: var(--dark-bg) !important;
+}
+
+.bg-darker {
+  background-color: var(--darker-bg) !important;
+}
+
+.bg-light {
+  background-color: var(--light-bg) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-success {
+  background-color: var(--success-color) !important;
+}
+
+.bg-warning {
+  background-color: var(--warning-color) !important;
+}
+
+
+</style>
+  <style>
+/* Navbar specific styles */
+.navbar {
+  padding: 0.5rem 0;
+  background-color: rgba(35, 39, 42, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: white;
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Brand container styles */
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  width: 48px;
+  height: 48px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Fix for navbar on mobile */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: rgba(35, 39, 42, 0.95);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .navbar-nav {
+    padding: 0.5rem 0;
+  }
+  
+  .nav-item {
+    margin-bottom: 0.5rem;
+  }
+  
+  .navbar-nav .btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+}
+
+</style>
+  <style>
+.carousel-inner {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+</style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -232,7 +463,107 @@
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://js.stripe.com/v3/"></script>
-  <script src="app.js"></script>
+  <script>
+// Initialize Firebase on the client side
+const firebaseConfig = {
+  apiKey: "your-api-key",
+  authDomain: "your-project-id.firebaseapp.com",
+  projectId: "your-project-id",
+  storageBucket: "your-project-id.appspot.com",
+  messagingSenderId: "your-messaging-sender-id",
+  appId: "your-app-id"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// Check if user is logged in
+const discordUserId = localStorage.getItem('discordUserId');
+const userLoggedIn = !!discordUserId;
+
+// Show purchase button only if logged in
+if (userLoggedIn) {
+  document.getElementById('login-btn').style.display = 'none';
+  document.getElementById('purchase-container').style.display = 'block';
+  
+  // Check if user is already premium
+  firebase.firestore().collection('users').doc(discordUserId).get()
+    .then(doc => {
+      if (doc.exists && doc.data().isPremium) {
+        // User is already premium, show different UI
+        document.getElementById('purchase-btn').textContent = 'Premium Active';
+        document.getElementById('purchase-btn').classList.add('btn-secondary');
+        document.getElementById('purchase-btn').disabled = true;
+      }
+    })
+    .catch(error => {
+      console.error("Error checking premium status:", error);
+    });
+  
+  // Setup Stripe purchase button
+  document.getElementById('purchase-btn').addEventListener('click', async () => {
+    try {
+      const response = await fetch('/create-checkout-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          discordUserId: discordUserId
+        }),
+      });
+      
+      const session = await response.json();
+      
+      // Redirect to Stripe Checkout
+      const stripe = Stripe('your_stripe_publishable_key');
+      stripe.redirectToCheckout({ sessionId: session.id });
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  });
+}
+
+// Discord OAuth2 login
+function redirectToDiscordAuth() {
+  const CLIENT_ID = 'your_discord_client_id';
+  const REDIRECT_URI = encodeURIComponent(`${window.location.origin}/auth/callback`);
+  const SCOPES = encodeURIComponent('identify guilds');
+  
+  window.location.href = `https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code&scope=${SCOPES}`;
+}
+
+// Check URL for auth callback
+const urlParams = new URLSearchParams(window.location.search);
+const authCode = urlParams.get('code');
+
+if (authCode) {
+  // Exchange code for token
+  exchangeCodeForToken(authCode);
+}
+
+async function exchangeCodeForToken(code) {
+  try {
+    const response = await fetch('/auth/discord', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ code }),
+    });
+    
+    const data = await response.json();
+    
+    if (data.userId) {
+      localStorage.setItem('discordUserId', data.userId);
+      window.location.href = '/'; // Redirect to home page
+    }
+  } catch (error) {
+    console.error('Auth error:', error);
+  }
+}
+
+</script>
 </body>
 </html>
 
