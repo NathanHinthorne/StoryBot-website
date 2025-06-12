@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About StoryBot - Collaborative Storytelling for Discord</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">StoryBot</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="premium.html">Premium</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>About StoryBot</h1>
+    </div>
+  </div>
+
+  <section class="about-section py-5">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6">
+          <h2>What is StoryBot?</h2>
+          <p>StoryBot is a collaborative storytelling Discord bot powered by the Gemini API. It enables users to co-author stories and engage with each other in a structured, gamified format.</p>
+          <p>Our mission is to bring communities together through the power of shared storytelling, enhanced by AI assistance that helps spark creativity and keep narratives flowing.</p>
+        </div>
+        <div class="col-lg-6">
+          <div id="storyBotCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/storybot-demo1.png" alt="StoryBot in action" class="img-fluid rounded shadow">
+              </div>
+              <div class="carousel-item">
+                <img src="images/storybot-demo2.png" alt="StoryBot conversation example" class="img-fluid rounded shadow">
+              </div>
+              <div class="carousel-item">
+                <img src="images/storybot-demo3.png" alt="StoryBot features showcase" class="img-fluid rounded shadow">
+              </div>
+            </div>
+            <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#storyBotCarousel" data-bs-slide="prev">
+              <div class="custom-arrow custom-arrow-prev">
+                <span class="visually-hidden">Previous</span>
+              </div>
+            </button>
+            <button class="carousel-control-next custom-carousel-control" type="button" data-bs-target="#storyBotCarousel" data-bs-slide="next">
+              <div class="custom-arrow custom-arrow-next">
+                <span class="visually-hidden">Next</span>
+              </div>
+            </button>
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#storyBotCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#storyBotCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#storyBotCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-5">
+        <div class="col-lg-12">
+          <h2 class="text-center mb-4">Key Features</h2>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="feature-card">
+            <h3><i class="fas fa-book me-2"></i>Collaborative Storytelling</h3>
+            <p>Users build stories one message at a time, creating a seamless narrative flow that everyone can contribute to.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="feature-card">
+            <h3><i class="fas fa-robot me-2"></i>Gemini AI Assistance</h3>
+            <p>Automatically generate plot twists, summaries, and more to enhance your storytelling experience.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="feature-card">
+            <h3><i class="fas fa-history me-2"></i>Story Tracking</h3>
+            <p>Full story history with options to save and export your collaborative creations to Google Docs.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="feature-card">
+            <h3><i class="fas fa-cogs me-2"></i>Easy Integration</h3>
+            <p>Simple setup process to add StoryBot to your Discord server and start creating stories immediately.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="commands-section py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Available Commands</h2>
+      
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="commands-card mb-4">
+            <h3>Core Story Commands</h3>
+            <ul class="command-list">
+              <li><code>/startstory &lt;your text&gt;</code> - Start a new story with your opening text</li>
+              <li><code>/add &lt;your text&gt;</code> - Add your part to the story</li>
+              <li><code>/endstory</code> - Finalizes the story with an optional epilogue</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <div class="commands-card mb-4">
+            <h3>AI Enhancer Commands</h3>
+            <ul class="command-list">
+              <li><code>/recap</code> - Summarizes recent story progress</li>
+              <li><code>/plotwist</code> - Gemini generates and inserts a surprise twist</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tech-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Technologies We Use</h2>
+      
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <div class="tech-card">
+            <i class="fab fa-python fa-3x mb-3"></i>
+            <h4>Python</h4>
+            <p>Core programming language</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="tech-card">
+            <i class="fab fa-discord fa-3x mb-3"></i>
+            <h4>discord.py</h4>
+            <p>Discord bot framework</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="tech-card">
+            <i class="fas fa-brain fa-3x mb-3"></i>
+            <h4>Gemini API</h4>
+            <p>AI story generation</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="tech-card">
+            <i class="fas fa-server fa-3x mb-3"></i>
+            <h4>Flask</h4>
+            <p>Web server framework</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="tech-card">
+            <i class="fas fa-database fa-3x mb-3"></i>
+            <h4>Firebase</h4>
+            <p>Firestore database</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="tech-card">
+            <i class="fas fa-file-alt fa-3x mb-3"></i>
+            <h4>Google Docs API</h4>
+            <p>Story export functionality</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta py-5 bg-primary text-white">
+    <div class="container text-center">
+      <h2>Ready to Start Your Story?</h2>
+      <p class="lead mb-4">Add StoryBot to your Discord server today</p>
+      <a href="https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=8&scope=bot%20applications.commands" class="btn btn-light btn-lg">
+        <i class="fab fa-discord me-2"></i>Add to Discord
+      </a>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>StoryBot</h5>
+          <p>Collaborative storytelling for Discord communities</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="index.html">Home</a></li>
+            <li class="list-inline-item"><a href="about.html">About</a></li>
+            <li class="list-inline-item"><a href="premium.html">Premium</a></li>
+          </ul>
+          <p class="mb-0">© 2025 StoryBot. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="app.js"></script>
+  <script src="js/about.js"></script>
+</body>
+</html>
+
