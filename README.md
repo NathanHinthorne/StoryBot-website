@@ -25,21 +25,5 @@ This repository contains the official website for StoryBot, a collaborative stor
 - `js/` - JavaScript functionality
 - `images/` - SVG wave dividers and other visual assets
 
-## Getting Started
-1. Clone the repository
-2. Open `index.html` in your browser to view the site locally
-3. For full functionality, update Firebase and Discord API credentials in the configuration files
-
-## Deployment
-The site can be deployed to any static hosting service:
-1. Run `node bundle-static-html.js` to create bundled versions of the HTML files
-2. Upload the bundled files to your hosting provider
-
-## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-[MIT License](LICENSE)
-
-## Contact
-For questions or support, please join our [Discord server](https://discord.gg/storybot).
+## Copyright
+This project is owned by Nathan Hinthorne. All rights reserved.
